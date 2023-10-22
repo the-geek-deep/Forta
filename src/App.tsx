@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Header from "./components/Header/Header";
+
+import Header from "./components/Header";
 import WalletCreate from "./Wallet/WalletCreate";
 export default function WebApp() {
   return (
@@ -7,9 +8,9 @@ export default function WebApp() {
     <BrowserRouter>
         <Header />
         <Routes>
-            
+          
             <Route path="/" element={<WalletCreate />} />
-            
+           
         </Routes>
     </BrowserRouter>
     </div>
