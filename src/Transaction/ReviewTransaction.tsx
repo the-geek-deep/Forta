@@ -2,6 +2,7 @@ import SafeServiceClient from '@safe-global/safe-service-client';
 import { ethers } from 'ethers';
 import React, { useEffect, useState } from 'react'
 import { TransactionUtils } from '../utils/TransactionUtils';
+import Safe from '@safe-global/safe-core-sdk';
 
 function ReviewTransactions() {
 
@@ -14,9 +15,15 @@ function ReviewTransactions() {
     useEffect(() => {
 
         async function getPendingTransactions() {
-            
+            const txServiceUrl = ""
+            const ethAdapter = await TransactionUtils.getEthAdapter(false)
+            const safeService =  new SafeServiceClient({txServiceUrl , ethAdapter })
+            console.log({safeService , safeAddress})
+            const pendingTransactionResults = (await safeService.getPendingTransactions(safeAddress)).results
+            setPendingTransactions(pendingTransactionResults)
+
           }
-      
+    
           getPendingTransactions()
     }, [safeAddress])
 

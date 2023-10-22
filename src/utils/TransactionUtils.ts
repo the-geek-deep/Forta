@@ -54,7 +54,8 @@ export class TransactionUtils {
         const safeAddress = safe.getAddress()
 
         console.log(safeAddress)
-
+        console.log(`sepolia.etherscan.io/tx/${safeAddress}`)
+        
         
 
 
@@ -85,7 +86,7 @@ export class TransactionUtils {
 
         const senderSignature  = await safeSDK.signTransactionHash(safeTxHash)
 
-        const txServiceUrl = 'https://safe-transaction-zkevm.safe.global/'
+        const txServiceUrl = 'https://safe-transaction-zkevm.safe.global'
         const safeService = new SafeServiceClient({txServiceUrl , ethAdapter})
 
         await safeService.proposeTransaction({
@@ -101,10 +102,38 @@ export class TransactionUtils {
     }
 
     static confirmTransaction = async (safeAddress: string, safeTxHash: string) => {
-        
+        const ethAdapter  = await this.getEthAdapter();
+        const safeService = new SafeServiceClient({txServiceUrl : '' , ethAdapter})
+
+        const safeSDK = await Safe.create(
+            {
+                ethAdapter,
+                safeAddress
+            }
+        ) 
+
+        const signature  = await safeSDK.signTransactionHash(safeTxHash)
+        const response = await safeService.confirmTransaction(safeTxHash,signature.data)
+        console.log(`safe-transaction-zkevm.safe.global/api/v1/multisig-transactions/${safeTxHash}`)
+
+        return response;
     }
 
     static executeTransaction = async (safeAddress: string, safeTxHash: string) => {
-        
+        const ethAdapter = await this.getEthAdapter();
+        const safeService = new SafeServiceClient({txServiceUrl : "" , ethAdapter})
+
+        const safeSdk  = await Safe.create({
+            ethAdapter, 
+            safeAddress
+        })
+
+        const safeTransaction = await safeService . getTransaction(safeTxHash)
+        const executeTxResponse  = await safeSdk.executeTransaction(safeTransaction)
+        const receipt = await executeTxResponse.transactionResponse?.wait()!
+        console.log(`https://sepolia.etherscan.io/tx/${receipt.transactionHash}`)
+        console.log(`https://safe-tranasction-goerli.safe.global/api/v1/multisig-transaction/${safeTxHash}`)
+
+        return receipt;
     }
-}
+} 
