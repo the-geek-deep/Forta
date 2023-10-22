@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+# FORTA- a multi-sig wallet
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Description
 
-## Available Scripts
+### Introduction
 
-In the project directory, you can run:
+The Multi-Signature Wallet with Safe-SDK on Polygon zkEVM is a revolutionary blockchain project designed to create a highly secure and user-friendly multi-signature wallet using the Safe-SDK framework. This wallet will empower users to create, review, and confirm transactions seamlessly, all while benefiting from the scalability and efficiency of the Polygon zkEVM network.
 
-### `npm start`
+### Objective
 
-Runs the app in the development mode.\
+The primary objective of this project is to build a multi-signature wallet on the Polygon zkEVM network by leveraging the Safe-SDK framework. Users will be able to initiate, review, and confirm transactions securely, ensuring an additional layer of security in their decentralized financial operations.
+
+## Key Features
+
+- **Multi-Signature Functionality:** The wallet will support multi-signature capabilities, allowing multiple users to collaboratively confirm transactions, enhancing security through consensus.
+
+- **Safe-SDK Integration:** The wallet will be developed using the Safe-SDK framework, known for its security and reliability in smart contract development. This integration will ensure that the wallet's smart contracts are well-audited and robust.
+
+- **User-Friendly Interface:** The wallet will feature an intuitive and user-friendly interface for easy wallet creation, transaction review, and confirmation. This approach promotes mainstream adoption of decentralized financial tools.
+
+- **Polygon zkEVM Compatibility:** The project will take advantage of the Polygon zkEVM network's speed and cost-effectiveness, alleviating congestion and high gas fees experienced on the Ethereum mainnet.
+
+- **Transaction History and Notifications:** Users will have access to their transaction history and receive notifications for important events, offering enhanced control and transparency over their assets.
+
+## Implementation and Development
+
+The project will encompass the development of smart contracts using the Safe-SDK, ensuring robust testing and audits to guarantee the system's security. A frontend interface will be created to allow users to interact with the multi-signature wallet effectively.
+
+## Benefits
+
+- Enhanced security through multi-signature support.
+- Improved user experience with the Safe-SDK framework.
+- Access to the scalability and cost-efficiency of the Polygon zkEVM network.
+- A user-friendly and intuitive platform for managing assets and executing transactions.
+
+## Conclusion
+
+The Multi-Signature Wallet with Safe-SDK on Polygon zkEVM project is poised to significantly contribute to the secure and accessible landscape of decentralized finance. By combining advanced technology with user-friendly design, this project will promote the growth and adoption of blockchain-based financial services.
+
+## How to start
+
+1. Clone the repository to your local machine:
+
+```bash
+    git clone https://github.com/the-geek-deep/forta.git
+```
+2. Navigate to project directory:
+```bash
+    cd forta
+```
+3. Install the required dependencies:
+```bash
+    yarn
+```
+3. Start the server on [http://localhost:3000](http://localhost:3000):
+```bash
+    yarn start
+```
+
+This runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
