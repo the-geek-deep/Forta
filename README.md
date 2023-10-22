@@ -33,10 +33,6 @@ The project will encompass the development of smart contracts using the Safe-SDK
 - Access to the scalability and cost-efficiency of the Polygon zkEVM network.
 - A user-friendly and intuitive platform for managing assets and executing transactions.
 
-## Conclusion
-
-The Multi-Signature Wallet with Safe-SDK on Polygon zkEVM project is poised to significantly contribute to the secure and accessible landscape of decentralized finance. By combining advanced technology with user-friendly design, this project will promote the growth and adoption of blockchain-based financial services.
-
 ## How to start
 
 1. Clone the repository to your local machine:
@@ -62,4 +58,8 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
+
+## Conclusion
+
+The Multi-Signature Wallet with Safe-SDK on Polygon zkEVM project is poised to significantly contribute to the secure and accessible landscape of decentralized finance. By combining advanced technology with user-friendly design, this project will promote the growth and adoption of blockchain-based financial services.
 
